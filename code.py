@@ -1,5 +1,4 @@
 import telebot
-from telebot import types
 
 # Создаем бота
 bot = telebot.TeleBot('5003885450:AAGF_z-v9F6Wc2NZGCXrOwvhk-_MEqwPo5U')
@@ -7,14 +6,14 @@ bot = telebot.TeleBot('5003885450:AAGF_z-v9F6Wc2NZGCXrOwvhk-_MEqwPo5U')
 # Команда start
 @bot.message_handler(commands=["start"])
 def start(m, res=False):
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    item1 = types.KeyboardButton("🌐 О Центре")
-    item2 = types.KeyboardButton("🏛 Отделения")
-    item3 = types.KeyboardButton("🏢 Недра")
-    item4 = types.KeyboardButton("🤝 Мероприятия")
-    item5 = types.KeyboardButton("🎓 Образование")
-    item6 = types.KeyboardButton("🎤 Лекторий")
-    item7 = types.KeyboardButton("💼 Компетенции")
+    markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
+    item1 = telebot.types.KeyboardButton("🌐 О Центре")
+    item2 = telebot.types.KeyboardButton("🏛 Отделения")
+    item3 = telebot.types.KeyboardButton("🏢 Недра")
+    item4 = telebot.types.KeyboardButton("🤝 Мероприятия")
+    item5 = telebot.types.KeyboardButton("🎓 Образование")
+    item6 = telebot.types.KeyboardButton("🎤 Лекторий")
+    item7 = telebot.types.KeyboardButton("💼 Компетенции")
 
     markup.add(item1)
     markup.add(item2, item3)
