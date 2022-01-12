@@ -1,7 +1,10 @@
 import telebot
 
+with open('set.txt') as stxt:
+    line = stxt.readlines()
+
 # Создаем бота
-bot = telebot.TeleBot('5003885450:AAGF_z-v9F6Wc2NZGCXrOwvhk-_MEqwPo5U')
+bot = telebot.TeleBot(line[0])
 
 
 # Команда start
