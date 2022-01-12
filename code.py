@@ -1,12 +1,10 @@
 import telebot
 
-with open('set.txt') as stxt:
-    line = stxt.readlines()
+with open("set.txt") as f:
+    TOKEN = f.read().strip()
 
 # Создаем бота
-bot = telebot.TeleBot(line[0])
-
-
+bot = telebot.TeleBot(TOKEN)
 # Команда start
 @bot.message_handler(commands=["start"])
 def start(m, res=False):
